@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                     <li><a href="#about">About</a></li>
+                      <li><a href="#services">Services</a></li>
+                       <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1> Hi, I'm <span> Kevin Jen</span><br> From Australia</h1>
+            </div>
+        </div>
+    </div>
+    <!--------about-------->
+   <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Kevin Jen, a passionate UI/UX Designer who loves creating visually appealing, user-friendly, and meaningful digital experiences.
+                       I specialize in designing intuitive interfaces that combine creativity with functionality. I enjoy exploring design trends, understanding user needs, and transforming ideas into engaging digital solutions.
+                       My goal is to create designs that not only look beautiful but also make technology easier and more enjoyable to use.</p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                         <p class="tab-links" onclick="opentab('education')">Experience</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Designing Web App interfaces</li>
+                            <li><span>App Development</span><br>Building Android/IOS Apps</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2026- Current</span><br> UI/UX Training at ET Institute</li>
+                            <li><span>2024-2026</span><br>Team Lead at StarApp LLC.</li>
+                            <li><span>2022-2024</span><br>Internship at ekart commerce.</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br> UI/UX Training at ET Institute</li>
+                            <li><span>2020</span><br>MBA from MIT Banglore</li>
+                            <li><span>2018</span><br>BBA from ISM Banglore</li>
+                        </ul>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------services-------->
+<div id="services">
+    <div class="container">
+   <h1 class="sub-title">My Services</h1>
+   <div class="services-list">
+    <div>
+        <h2>Web design</h2>
+        <p>Creating visually appealing, responsive, and user-friendly websites with modern layouts. Focused on attractive designs, and a seamless user experience.
+            <a href="#">Learn more</a>
+        </p>
+    </div>
+    <div>
+        <h2>UI/UX Design</h2>
+        <p>Creating visually appealing, responsive, and user-friendly websites with modern layouts. Focused on attractive designs, and a seamless user experience.
+            <a href="#">Learn more</a>
+        </p>
+    </div>
+     <div>
+        <h2>App Design</h2>
+        <p>Creating visually appealing, responsive, and user-friendly websites with modern layouts. Focused on attractive designs, and a seamless user experience.
+            <a href="#">Learn more</a>
+        </p>
+
+   </div>
+
+    </div>
+</div>
+<!-------------portfolio---------------->
+<div id="portfolio">
+    <div class="container">
+       <h1 class="sub-title">My Work</h1>  
+       <div class="work-list">
+        <div class="work">
+            <img src="images/work-1.png" >
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>This app connects you to the talented people around the world.
+                    Download it from play store. </p>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work-2.png" >
+            <div class="layer">
+                <h3>Music App</h3>
+                <p>This app connects you to the talented people around the world.
+                    Download it from play store. </p>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/work-3.png" >
+             <div class="layer">
+                <h3>Online Shopping App</h3>
+                <p>This app connects you to the talented people around the world.
+                    Download it from play store. </p>
+            </div>
+        </div>
+       </div>
+    </div>
+    <!-----------------contact--------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">              
+                <div class="contact-left">
+                    <h1 class="sub=title">Contact Me</h1>
+                    <p>contact@example.com</p>
+                    <p>9876543210</p>
+                    </div>
+                    <a href="images/my-cv.pdf" class="btn btn2">Download CV</a>
+                <div class="contact-right"></div>
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required>       
+                    <input type="text" name=""Email placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Kevin</p>
+    </div>
+</div>
+<script>
+
+ var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+     for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+</body>
+</html>
